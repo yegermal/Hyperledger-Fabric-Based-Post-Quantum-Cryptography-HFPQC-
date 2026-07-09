@@ -1,1 +1,58 @@
 
+network/
+│
+├── docker-compose.yaml
+├── docker-compose-pqc.yaml          # PQC services/extensions
+│
+├── configtx/
+│   ├── configtx.yaml
+│   ├── genesis.block
+│   └── channel-artifacts/
+│       ├── channel-a.tx
+│       └── channel-b.tx
+│
+├── crypto-config/
+│
+├── organizations/
+│   │
+│   ├── ordererOrganizations/
+│   │   └── founder.example.com/
+│   │       ├── ca/
+│   │       ├── msp/
+│   │       └── orderers/
+│   │
+│   ├── peerOrganizations/
+│   │   │
+│   │   ├── org1.example.com/
+│   │   │   ├── ca/
+│   │   │   ├── peers/
+│   │   │   ├── users/
+│   │   │   └── msp/
+│   │   │
+│   │   ├── org2.example.com/
+│   │   │
+│   │   └── org3.example.com/
+│
+├── chaincode/
+│   ├── asset-transfer/
+│   └── identity-management/
+│
+├── pqc/
+│   ├── liboqs/
+│   ├── certificates/
+│   ├── keys/
+│   └── pqc-proxy/
+│
+├── scripts/
+│   ├── enroll-cas.sh
+│   ├── generate-crypto.sh
+│   ├── create-channel-a.sh
+│   ├── create-channel-b.sh
+│   ├── join-channel.sh
+│   ├── anchor-peer-update.sh
+│   ├── deploy-chaincode.sh
+│   └── install-pqc.sh
+│
+└── monitoring/
+    ├── prometheus/
+    └── grafana/
